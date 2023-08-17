@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500&family=Pacifico&display=swap');
+
+:root{
+    --hind: 'Hind', sans-serif;
+    /* 300 - 500 */
+    --pacifico: 'Pacifico', cursive;
+    /* 400 */
+    --leftBg: #28384a;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
+}
+
+
+/* copy clipboard */
+main .modalCopy{
+    position: fixed;
+    top: -70rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: #eee;
+    height: 10rem;
+    width: 100vw;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+    border-radius: 1rem;
+    gap: .5rem;
+    transition: 1s;
+}
+main .modalCopy >input{
+    width: 99%;
+    height: 2rem;
+}
+main .modalCopy >button{
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+
+
+
+/* spinner */
+.spinnerCon{
+    position: fixed;
+    z-index: 10000000000;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    z-index: -9999999999;
+    transition: .5s ease;
+}
+.spinner {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    border: 4.5px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+
+  }
+  
+  .spinner::before,
+  .spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  
+  .spinner::before {
+    border-color: #474bff #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+  }
+  
+  .spinner::after {
+    margin: 8.9px;
+  }
+  
+  @keyframes spinner-e04l1k {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+main .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 650px;
+    height: 100vh;
+}
+main .home .left{
+    height: 100%;
+    background: var(--leftBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+main .home .left .short{
+    height: 30rem;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    margin-top: 2rem;
+}
+
+main .home .left .short >h1{
+    font-family: var(--pacifico);
+    font-size: 3rem;
+    text-align: center;
+    color: rgba(219, 219, 219);
+    font-weight: 300;
+}
+
+
+
+main .home .left .short >input{
+    height: 3rem;
+    font-size: 1.4rem;
+    outline: none;
+    width: 100%;
+    max-width: 650px;
+    text-indent: 1rem;
+    margin: 0 auto;
+    border-radius: 7px;
+    font-family: var(--hind);
+}
+main .home .left .short .button {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: #1875FF;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0px 14px 56px -11px #1875FF;
+    width: 10em;
+    padding: .5rem;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: var(--hind);
+   }
+   
+main .home .left .short .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+   }
+   
+main .home .left .short .button span:after {
+    content: 'URL';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+   }
+   
+main .home .left .short .button:hover span {
+    padding-right: 2em;
+   }
+   
+main .home .left .short .button:hover span:after {
+    opacity: 4;
+    right: 2px;
+   }
+
+
+main .home .left .links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    gap: 1rem;
+}
+main .home .left .links >a{
+    color: rgba(219, 219, 219);
+    font-family: var(--hind);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(219, 219, 219);
+    transition: 0.4s;
+}
+main .home .left .links >a:hover{
+    color: #1875FF;
+}
+
+
+
+
+
+
+
+
+
+main .home .right{
+    height: 100%;
+    background: url("../assets/rightBg.jpeg")no-repeat center center/cover;
+    position: relative;
+    width: 50%;
+}
+main .home .right::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    top: 0;left:0;
+}
+
+
+
+
+/* footer */
+footer{
+    height: 5rem;
+    width: 100%;
+    background: #28384a;
+    font-family: var(--hind);
+    color: #fff;
+    display: grid;
+    place-items:center;
+    border-top: 1px solid rgba(219, 219, 219);
+}
+
+
+
+
+
+@media screen and (min-width: 2500px){
+
+    main .home .left{
+        width: 100%;
+    }
+    main .home .left .short{
+        border: 1px solid rgba(219, 219, 219);
+        max-width: 600px;
+        padding: 2rem;
+        max-height: 400px;
+    }
+    main .home .right{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px){
+
+    main .home .left{
+        width: 100%;
+    }
+
+    main .home .left .short >h1{
+        font-size: 2rem;
+    }
+
+    main .home .left .short{
+        border: 1px solid rgba(219, 219, 219);
+        width: 100%;
+        padding: 2rem;
+        max-height: 300px;
+       align-self: flex-start;
+
+    }
+    main .home .left .short >input{
+        font-size: 1.3rem;
+    }
+
+
+    main .home .right{
+        display: none;
+    }
+
+
+    main .home .left .short .button{
+        width: 95%;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+
+
+    main .home .left .short{
+        max-height: 390px;
+    }
+ 
+}
+
+
+
+
+
