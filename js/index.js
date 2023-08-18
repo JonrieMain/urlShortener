@@ -1,48 +1,5 @@
 $(document).ready(()=>{
 
-// copy
-
-copy = ()=> {
-
-    // Get the text field
-    const copyText = $('#inputCopy');
-
-     // Select the text field
-  copyText.select();
-  // Copy the text inside the text field
-  
-
- if (navigator.clipboard) {
-        // Use Clipboard API if available
-        navigator.clipboard.writeText(copyText.val())
-            .then(() => {
-                $('.modalCopy >button').text("Copied");
-                setTimeout(() => {
-                    $('.modalCopy').css("top", "-70rem");
-                }, 3000);
-            })
-            .catch(error => {
-                console.error("Failed to copy text:", error);
-            });
-    } else {
-        // Fallback approach for browsers without Clipboard API
-        try {
-            document.execCommand('copy');
-            $('.modalCopy >button').text("Copied");
-            setTimeout(() => {
-                $('.modalCopy').css("top", "-70rem");
-            }, 3000);
-        } catch (error) {
-            console.error("Failed to copy text:", error);
-        }
-    }
-
-
-
-  }
-
-
-
 
 let inp = $('#inp');
 let newName = $('#new');
