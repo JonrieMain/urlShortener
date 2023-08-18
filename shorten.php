@@ -19,7 +19,6 @@
 
 <div class="modalCopy">
     <input type="text" id="inputCopy">
-    <button onClick="copy();">Copy</button>
 </div>
 
 <section class="home">
