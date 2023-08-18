@@ -28,7 +28,7 @@ main .modalCopy{
     transform: translate(-50%,-50%);
     z-index: 10000;
     background: #eee;
-    height: 10rem;
+    height: 6.5rem;
     width: 100vw;
     max-width: 300px;
     display: flex;
@@ -43,10 +43,6 @@ main .modalCopy{
 main .modalCopy >input{
     width: 99%;
     height: 2rem;
-}
-main .modalCopy >button{
-    padding: .5rem 1rem;
-    cursor: pointer;
 }
 
 
